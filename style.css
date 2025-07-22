@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: radial-gradient(circle, #ffe0f0, #ffc0cb);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.glow-text {
+  font-size: 2.5em;
+  color: #fff;
+  text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 30px #ff3399;
+}
+
+.subtext {
+  font-size: 1.3em;
+  color: #fff;
+  margin-top: 10px;
+}
+
+canvas#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cake {
+  width: 150px;
+  margin-top: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff0f5;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-size: 1.4em;
+  color: #d63384;
+  z-index: 5;
+  text-align: center;
+}
