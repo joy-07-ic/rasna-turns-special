@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Rasna!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="birthday-song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <h1 class="glow-text" id="typing-text"></h1>
+    <p class="subtext">Wishing you a magical day, Rasna! 💖</p>
+    <img src="cake.gif" alt="Birthday Cake" class="cake" />
+    <canvas id="confetti"></canvas>
+  </div>
+
+  <div class="popup" id="popup">
+    <p>Dear Rasna,<br> I love you ❤️</p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Typing effect
+    const text = "🎉 Happy Birthday, Rasna! 🎉";
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typing-text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+    typeWriter();
+
+    // Show popup after a delay
+    setTimeout(() => {
+      document.getElementById("popup").style.display = "block";
+    }, 3000);
+  </script>
+</body>
+</html>
